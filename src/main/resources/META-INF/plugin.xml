@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.example.secureview</id>
     <name>SecureView Password Masking</name>
-    <vendor email="support@example.com" url="https://github.com/example/secureview">SecureView</vendor>
+    <vendor email="support@example.com" url="https://github.com/kannanjmc/kannanjmc">SecureView</vendor>
     <description><![CDATA[
         <p>SecureView is an IntelliJ Platform plugin that visually masks password and secret values in editor tabs without changing file contents.</p>
         <p><strong>Features:</strong></p>
