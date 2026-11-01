@@ -1,4 +1,4 @@
-package com.example.secureview
+package com.kannanjmc.secureview
 
 /** A half-open document range containing only the secret value (not its quotes). */
 data class SecretRange(val start: Int, val end: Int)

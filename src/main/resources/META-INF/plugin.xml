@@ -1,5 +1,5 @@
 <idea-plugin>
-    <id>com.example.secureview</id>
+    <id>com.kannanjmc.secureview</id>
     <name>SecureView Password Masking</name>
     <vendor email="support@example.com" url="https://github.com/kannanjmc/secureview">SecureView</vendor>
     <description><![CDATA[
@@ -17,6 +17,6 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <editorFactoryListener implementation="com.example.secureview.SecureViewEditorFactoryListener" />
+        <editorFactoryListener implementation="com.kannanjmc.secureview.SecureViewEditorFactoryListener" />
     </extensions>
 </idea-plugin>

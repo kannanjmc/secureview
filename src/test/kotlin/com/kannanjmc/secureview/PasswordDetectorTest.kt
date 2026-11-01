@@ -1,4 +1,4 @@
-package com.example.secureview
+package com.kannanjmc.secureview
 
 import kotlin.test.Test
 import kotlin.test.assertEquals

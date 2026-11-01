@@ -1,4 +1,4 @@
-package com.example.secureview
+package com.kannanjmc.secureview
 
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.application.ModalityState
