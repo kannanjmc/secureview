@@ -40,8 +40,7 @@ tasks.test { useJUnitPlatform() }
 intellijPlatform {
     pluginConfiguration {
         ideaVersion {
-            sinceBuild = "253"
-            untilBuild = "253.*"
+            sinceBuild = "231"
         }
         changeNotes = "Initial release: visually masks sensitive values in editor tabs."
     }
