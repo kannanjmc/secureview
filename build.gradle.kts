@@ -40,9 +40,9 @@ tasks.test { useJUnitPlatform() }
 intellijPlatform {
     pluginConfiguration {
         ideaVersion {
-            sinceBuild = "231"
+            sinceBuild = "253"
         }
-        changeNotes = "1.0.1: Support all IntelliJ IDEA versions from 2023.1 onwards"
+        changeNotes = "1.0.1: Support IntelliJ IDEA 2025.3 and later"
     }
 
     publishing {
