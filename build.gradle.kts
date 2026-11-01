@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "com.kannanjmc.secureview"
-version = "1.0.2"
+version = "1.0.5"
 
 kotlin {
     compilerOptions {
@@ -41,8 +41,9 @@ intellijPlatform {
     pluginConfiguration {
         ideaVersion {
             sinceBuild = "241"
+            untilBuild = "262.*"
         }
-        changeNotes = "1.0.2: Support IntelliJ IDEA 2024.1 and later"
+        changeNotes = "1.0.3: Support IntelliJ IDEA 2024.1 and later"
     }
 
     publishing {

@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.3] - 2026-10-31
+
+### Changed
+- Support IntelliJ IDEA 2024.1 and later (sinceBuild: 241)
+
 ## [1.0.2] - 2026-10-31
 
 ### Changed
