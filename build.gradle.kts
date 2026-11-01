@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "com.kannanjmc.secureview"
-version = "1.0.0"
+version = "1.0.1"
 
 kotlin {
     compilerOptions {
@@ -42,7 +42,7 @@ intellijPlatform {
         ideaVersion {
             sinceBuild = "231"
         }
-        changeNotes = "Initial release: visually masks sensitive values in editor tabs."
+        changeNotes = "1.0.1: Support all IntelliJ IDEA versions from 2023.1 onwards"
     }
 
     publishing {

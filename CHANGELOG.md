@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.1] - 2026-10-31
+
+### Changed
+- Support all IntelliJ IDEA versions from 2023.1 onwards (sinceBuild: 231)
+- Removed version restriction to support future IntelliJ IDEA releases
+
 ## [1.0.0] - 2026-10-31
 
 ### Added
