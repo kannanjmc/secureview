@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "com.kannanjmc.secureview"
-version = "1.0.6"
+version = "1.0.7"
 
 kotlin {
     compilerOptions {
@@ -43,7 +43,7 @@ intellijPlatform {
         ideaVersion {
             sinceBuild = "241"
         }
-        changeNotes = "1.0.6: Added reveal action and fixed masking with MarkupModel"
+        changeNotes = "1.0.7: Fixed IntelliJ version compatibility"
     }
 
     publishing {
