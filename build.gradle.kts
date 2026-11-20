@@ -42,7 +42,6 @@ intellijPlatform {
     pluginConfiguration {
         ideaVersion {
             sinceBuild = "241"
-            untilBuild = "999.*"
         }
         changeNotes = "1.0.6: Added reveal action and fixed masking with MarkupModel"
     }
