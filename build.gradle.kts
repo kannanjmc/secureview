@@ -1,10 +1,10 @@
 plugins {
-    id("org.jetbrains.kotlin.jvm") version "2.2.20"
+    id("org.jetbrains.kotlin.jvm") version "2.3.0"
     id("org.jetbrains.intellij.platform") version "2.19.0"
 }
 
 group = "com.kannanjmc.secureview"
-version = "1.0.7"
+version = "1.0.8"
 
 kotlin {
     compilerOptions {
@@ -13,8 +13,8 @@ kotlin {
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_21
-    targetCompatibility = JavaVersion.VERSION_21
+    sourceCompatibility = JavaVersion.VERSION_25
+    targetCompatibility = JavaVersion.VERSION_25
 }
 
 repositories {
@@ -27,7 +27,7 @@ repositories {
 
 dependencies {
     intellijPlatform {
-        intellijIdea("2025.3")
+        intellijIdea("2026.2")
         pluginVerifier()
         zipSigner()
         bundledPlugin("org.jetbrains.kotlin")
@@ -43,7 +43,7 @@ intellijPlatform {
         ideaVersion {
             sinceBuild = "241"
         }
-        changeNotes = "1.0.7: Fixed IntelliJ version compatibility"
+        changeNotes = "1.0.8: Built for IntelliJ IDEA 2026.2 compatibility"
     }
 
     publishing {
