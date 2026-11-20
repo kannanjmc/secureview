@@ -19,4 +19,14 @@
     <extensions defaultExtensionNs="com.intellij">
         <editorFactoryListener implementation="com.kannanjmc.secureview.SecureViewEditorFactoryListener" />
     </extensions>
+
+    <actions>
+        <action id="SecureView.RevealSecret"
+                class="com.kannanjmc.secureview.RevealSecretAction"
+                text="Reveal Secret"
+                description="Reveal the masked secret at the cursor position">
+            <keyboard-shortcut keymap="$default" first-keystroke="cmd alt shift R" />
+            <add-to-group group-id="EditorPopupMenu" anchor="last" />
+        </action>
+    </actions>
 </idea-plugin>

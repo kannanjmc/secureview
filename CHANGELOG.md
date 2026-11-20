@@ -2,6 +2,40 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.6] - 2026-11-19
+
+### Added
+- `RevealSecretAction` - Allows users to reveal masked secrets
+- Keyboard shortcut: `Cmd+Option+Shift+R` (Mac) / `Ctrl+Alt+Shift+R` (Windows/Linux)
+- Context menu option: Right-click on masked secret → "Reveal Secret"
+
+### Changed
+- Replaced folding-based masking with `MarkupModel` highlighters + `CustomHighlighterRenderer`
+- Secrets are now masked using transparent text + custom `********` rendering
+- No longer relies on IntelliJ's fold state restoration (fixes reopening issues)
+- Masking is applied on file open, not during editing (prevents interference)
+- Revealed secrets stay revealed while editing
+
+### Fixed
+- Secrets are masked again when closing and reopening files
+- No more fold state restoration issues
+- Reveal functionality works reliably
+
+## [1.0.13] - 2026-11-12
+
+### Changed
+- Switched from IntelliJ fold regions to inlay hints for secret masking
+- Inlay hints render masked text directly over secrets, avoiding fold state restoration issues
+- Secrets now always show as masked (*****) regardless of file open/close cycles
+- Fixed issue where revealed secrets were not being masked again when file was reopened
+
+## [1.0.12] - 2026-11-12
+
+### Fixed
+- Fixed issue where revealed secrets were not being masked again when file was closed and reopened
+- Added second pass to force fold regions to collapse after IntelliJ restores fold state
+- Secrets now always start collapsed when opening a file
+
 ## [1.0.3] - 2026-10-31
 
 ### Changed

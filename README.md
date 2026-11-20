@@ -7,7 +7,7 @@ A Kotlin IntelliJ Platform plugin that visually masks password and secret values
 - **Automatic Detection**: Detects common secret key patterns including:
   - `password`, `passwd`, `pwd`
   - `secret`, `client_secret`
-  - `api_key`, `access_token`, `auth_token`, `refresh_token`
+  - `api_key`, `access_token`, `auth_token`, `refresh_token`, `token`
   - `private_key`, `credential`, `credentials`
 
 - **Multi-Format Support**: Works with:
@@ -17,8 +17,10 @@ A Kotlin IntelliJ Platform plugin that visually masks password and secret values
   - XML elements (`<password>value</password>`)
   - Java/Kotlin assignments
 
-- **Visual Masking**: Folds detected secret values to display as `********` in the editor
+- **Visual Masking**: Displays detected secret values as `********` in the editor
 - **Non-Destructive**: Does not modify the actual file contents
+- **Reveal on Demand**: Press `Cmd+Option+Shift+R` (Mac) or right-click → "Reveal Secret" to temporarily show a secret
+- **Reliable Masking**: Secrets are masked again when closing and reopening files
 
 ## Requirements
 
@@ -55,10 +57,28 @@ Available on the [JetBrains Marketplace](https://plugins.jetbrains.com/) (coming
 
 ## Usage
 
-Once installed, the plugin automatically masks detected secret values in your editor tabs. The masking applies to:
+Once installed, the plugin automatically masks detected secret values in your editor tabs.
+
+### Masking
+
+Secrets are automatically masked when you open a file. The masking applies to:
 - Property files
 - Configuration files
 - Source code with secret assignments
+
+### Revealing Secrets
+
+To temporarily reveal a masked secret:
+
+1. Place your cursor on the masked secret
+2. Press `Cmd+Option+Shift+R` (Mac) or `Ctrl+Alt+Shift+R` (Windows/Linux)
+3. Or right-click on the secret and select "Reveal Secret"
+
+The secret stays revealed while you edit it. Other secrets remain masked independently.
+
+### Re-masking
+
+When you close and reopen a file, all secrets are automatically masked again - even if you had revealed them before closing.
 
 ## Detection Coverage
 
@@ -78,8 +98,7 @@ Once installed, the plugin automatically masks detected secret values in your ed
   - External tools
   - Logs
   - Other plugins
-- Folding may be unavailable in some editor types. This implementation targets normal file editors, not consoles or every specialized editor.
-- A folded value can be revealed by expanding the fold. Do not treat this as a security boundary.
+- A masked value can be revealed by pressing the reveal shortcut or using the context menu. Do not treat this as a security boundary.
 
 ## Development
 
@@ -88,14 +107,15 @@ Once installed, the plugin automatically masks detected secret values in your ed
 ```
 src/
 ├── main/
-│   ├── kotlin/com/example/secureview/
+│   ├── kotlin/com/kannanjmc/secureview/
 │   │   ├── EditorMaskingService.kt    # Core masking logic
 │   │   ├── PasswordDetector.kt        # Secret detection patterns
-│   │   └── SecureViewEditorFactoryListener.kt  # Editor lifecycle hooks
+│   │   ├── SecureViewEditorFactoryListener.kt  # Editor lifecycle hooks
+│   │   └── RevealSecretAction.kt      # Reveal secret action
 │   └── resources/META-INF/
 │       └── plugin.xml                 # Plugin manifest
 └── test/
-    └── kotlin/com/example/secureview/
+    └── kotlin/com/kannanjmc/secureview/
         └── PasswordDetectorTest.kt    # Unit tests
 ```
 
@@ -124,9 +144,8 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Support
 
-For issues and feature requests, please use the [GitHub Issues](https://github.com/example/secureview/issues) page.
+For issues and feature requests, please use the [GitHub Issues](https://github.com/kannanjmc/secureview/issues) page.
 
 ## Acknowledgments
 
 Built with the [IntelliJ Platform Gradle Plugin](https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html)
-

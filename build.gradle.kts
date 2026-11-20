@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "com.kannanjmc.secureview"
-version = "1.0.5"
+version = "1.0.6"
 
 kotlin {
     compilerOptions {
@@ -33,6 +33,7 @@ dependencies {
         bundledPlugin("org.jetbrains.kotlin")
     }
     testImplementation(kotlin("test"))
+    testImplementation("junit:junit:4.13.2")
 }
 
 tasks.test { useJUnitPlatform() }
@@ -41,9 +42,9 @@ intellijPlatform {
     pluginConfiguration {
         ideaVersion {
             sinceBuild = "241"
-            untilBuild = "262.*"
+            untilBuild = "*"
         }
-        changeNotes = "1.0.3: Support IntelliJ IDEA 2024.1 and later"
+        changeNotes = "1.0.6: Added reveal action and fixed masking with MarkupModel"
     }
 
     publishing {
