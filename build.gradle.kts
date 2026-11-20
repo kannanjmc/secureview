@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "com.kannanjmc.secureview"
-version = "1.0.10"
+version = "1.0.11"
 
 kotlin {
     compilerOptions {
@@ -41,7 +41,6 @@ tasks.test { useJUnitPlatform() }
 intellijPlatform {
     pluginConfiguration {
         ideaVersion {
-            sinceBuild = "262"
         }
         changeNotes = "1.0.9: Fixed sinceBuild for IntelliJ 2026.2 compatibility"
     }
